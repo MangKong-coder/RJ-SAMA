@@ -1,0 +1,102 @@
+@import url(https://fonts.googleapis.com/css?family=Fjalla+One);
+body,
+html {
+  font-family: 'Fjalla One', sans-serif;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: rgb(169, 3, 41);
+  /* Old browsers */
+  /* IE9 SVG, needs conditional override of 'filter' to 'none' */
+  background: radial-gradient(ellipse at center, rgba(169, 3, 41, 1) 0%, rgba(143, 2, 34, 1) 44%, rgba(109, 0, 25, 1) 100%);
+}
+
+.rainbow-text {
+  position: absolute;
+  top: 50%;
+  display: block;
+  left: 50%;
+  margin-left: -99px;
+  margin-top: -50px;
+}
+
+.title-text {
+  text-align: center;
+}
+
+.title-text span.letters {
+  font-size: 6rem;
+}
+
+.letters {
+  color: #FFF;
+  text-shadow: 2px 2px 6px #333;
+  animation: color-changer 8s infinite;
+  transition: color-changer ease-in-out;
+  @for $i from 1 through 7 {
+    &:nth-of-type(#{$i}) {
+      animation-delay: #{$i * 100}ms;
+    }
+  }
+}
+
+@keyframes color-changer {
+  33% {
+    color: #EE0BF5;
+  }
+  /* #EE0BF5 cctv*/
+  66% {
+    color: #00CCFF;
+  }
+  /* #00CCFF marine */
+  100% {
+    color: #FFF;
+  }
+  /* #66F50B radio */
+}
+
+@-webkit-keyframes color-changer {
+  33% {
+    color: #EE0BF5;
+  }
+  /* #EE0BF5 cctv*/
+  66% {
+    color: #00CCFF;
+  }
+  /* #00CCFF marine */
+  100% {
+    color: #FFF;
+  }
+  /* #66F50B radio */
+}
+.container {
+  text-align: center;
+}
+
+#head {
+  font-size:390%;
+}
+
+#image {
+  margin-left: 14%;
+  width: 72%;
+  height: auto;
+}
+
+body {
+	background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
